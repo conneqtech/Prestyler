@@ -78,13 +78,13 @@ extension String {
     }
 }
 
-extension StringProtocol where Index == String.Index {
+extension StringProtocol {
     func indexes(of string: Self, options: String.CompareOptions = []) -> [Int] {
         var result: [Int] = []
         var start = startIndex
         while start < endIndex,
             let range = self[start..<endIndex].range(of: string, options: options) {
-                result.append(range.lowerBound.encodedOffset)
+                result.append(range.lowerBound.utf16Offset(in: self))
                 start = range.lowerBound < range.upperBound ? range.upperBound :
                     index(range.lowerBound, offsetBy: 1, limitedBy: endIndex) ?? endIndex
         }
