@@ -13,7 +13,7 @@ let package = Package(
         .target(
             name: "Prestyler",
             dependencies: [],
-            path: "Prestyler/Classes",
+            path: "Prestyler/Classes"
         )
     ],
 
