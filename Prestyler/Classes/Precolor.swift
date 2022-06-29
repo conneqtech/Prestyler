@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 /// Precolor helps to manage color information for Rule styles. By using precolor you can define background and foreground text colors, and also make some interesting effects.
